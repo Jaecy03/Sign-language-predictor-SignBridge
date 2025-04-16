@@ -1,6 +1,6 @@
 # SignBridge
 
-SignBridge is an interactive web application designed to help users learn American Sign Language (ASL) through a gamified approach. The application uses computer vision and machine learning to recognize sign language gestures in real-time through a webcam, providing immediate feedback to users.
+SignBridge is an interactive web application designed to help users learn American Sign Language (ASL) through a gamified approach. The application uses computer vision and machine learning and deep learning techniques to recognize sign language gestures in real-time through a webcam, providing immediate feedback to users. Also has features to text/speech to video for learning hand gestures of asl. 
 
 ## Table of Contents
 
@@ -106,12 +106,12 @@ Located in the `model` directory, this contains the trained machine learning mod
 ## Models
 
 ### Alphabet Recognition Model
-- **Architecture**: Sequential neural network
+- **Architecture**: LSTM+ CNN, Sequential neural network
 - **Input**: 63 hand landmark features from a single hand
-- **Output**: Probability distribution over 6 alphabet classes (A, B, C, D, E, F)
+- **Output**: Probability distribution over 6 alphabet classes (A, B, C, D, E, F, etc)
 - **Processing**: Uses MediaPipe to extract hand landmarks from a single frame
 
-### Word Recognition Model
+### Word Recognition Model(Deep learning)
 - **Architecture**: LSTM (Long Short-Term Memory) network
 - **Input**: Sequence of hand landmarks from multiple frames
 - **Output**: Probability distribution over 3 word classes ("busy", "hello", "help")
@@ -135,7 +135,7 @@ Located in the `model` directory, this contains the trained machine learning mod
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/yourusername/SignBridge.git
+git clone https://github.com/Jaecy03/Sign-language-predictor-SignBridge.git
 cd SignBridge
 ```
 
